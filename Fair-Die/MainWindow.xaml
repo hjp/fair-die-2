@@ -1,0 +1,35 @@
+﻿<Window x:Class="Hjp.Fair_Die.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fair_Die"
+        mc:Ignorable="d"
+        Title="Fair Die Checker" Height="350" Width="525"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="2" IsMainMenu="True">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_Open" Click="FileOpen_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Simulation">
+                <MenuItem Header="_Run" Click="SimulationRun_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <DataGrid x:Name="dataGrid" Grid.Column="1" Grid.Row="3"/>
+        <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="4" Height="10"></ProgressBar>
+
+    </Grid>
+</Window>
